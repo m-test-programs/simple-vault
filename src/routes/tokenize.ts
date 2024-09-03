@@ -2,11 +2,12 @@ import express, { Request, Response } from "express";
 const router = express.Router();
 
 import { TransmittedData } from "./models/token";
-import { tokenize, detokenize, database } from "../utils/tokenizer";
+import { tokenize, detokenize } from "../utils/tokenizer";
 import { CustomError } from "./models/error";
 import fs from "fs";
 import path from "path";
 import { isAuthorized } from "../middlewares/auth";
+import { database } from "../utils/database";
 
 router.post(
   "/tokenize",

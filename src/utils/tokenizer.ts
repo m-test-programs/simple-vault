@@ -1,13 +1,7 @@
 import crypto from "crypto";
 import fs from "fs";
 import path from "path";
-
-
-export const database: Map<string, string> = new Map(
-  JSON.parse(
-    fs.readFileSync(path.join(__dirname, "../../data/tokenMap.json"), "utf8")
-  )
-);
+import { database } from "./database";
 
 export const generateToken = () => {
   return crypto.randomBytes(16).toString("hex");

@@ -1,5 +1,23 @@
 import express from "express";
 import "dotenv/config";
+import fs from "fs"
+import path from "path"
+
+
+
+//create tokenMap if it doesn't exist
+
+fs.readFile(path.join(__dirname, "../data/tokenMap.json"), (err, _)=>{
+  if(err){
+    fs.writeFile(path.join(__dirname, "../data/tokenMap.json"), "[]", (err)=>{
+      if(err){
+        console.log(err)
+      }
+    })
+  }
+})
+
+
 
 const app = express();
 

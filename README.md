@@ -94,9 +94,9 @@ If the request is successful, the endpoint returns a response with the following
 {
   "id": "string",
   "data": {
-    "fullName": { "value": "string", "found": boolean },
-    "idNumber": { "value": "string", "found": boolean },
-    "creditCard": { "value": "string", "found": boolean }
+    "fullName": { "value": "string", "found": "boolean" },
+    "idNumber": { "value": "string", "found": "boolean" },
+    "creditCard": { "value": "string", "found": "boolean" }
   }
 }
 ```

@@ -11,8 +11,11 @@ Node.js >= 20 (https://nodejs.org/en)
 ## Procedure to start the application:
 
 From the project’s root folder, run the following commands:
+
 1-npm install - Installs the necessary dependencies and libraries. This step might take some time to complete.
+
 2.npm run dev - > start the application on port 3000
+
 3.The application is now ready to be used. To test the endpoints described in the following chapter, it is highly recommended to use the Postman application: https://www.postman.com/downloads
 
 ## Endpoints Description

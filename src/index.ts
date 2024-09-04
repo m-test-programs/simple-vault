@@ -23,8 +23,6 @@ const port = 3000;
 const tokenRoute = require("./routes/tokenize");
 const loginRoute = require("./routes/login");
 
-app.get("/", (req, res) => res.send("Express on Vercel"));
-
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));

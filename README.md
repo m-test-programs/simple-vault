@@ -59,6 +59,7 @@ The request must include a Bearer token in the following format:
   "idNumber": "string | number",
   "creditCard": "string"
 }
+```
 
 ### `POST /detokenize`
 

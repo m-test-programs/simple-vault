@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 const router = express.Router();
 
-import { TransmittedData } from "./models/token";
+import { DetokenizeResponse, TransmittedData } from "./models/token";
 import { tokenize, detokenize } from "../utils/tokenizer";
 import { CustomError } from "./models/error";
 import fs from "fs";
@@ -56,7 +56,7 @@ router.post(
 router.post(
   "/detokenize",
   isAuthorized,
-  (req: Request, res: Response<TransmittedData | CustomError>) => {
+  (req: Request, res: Response<DetokenizeResponse | CustomError>) => {
     const payload: TransmittedData = req.body;
 
     try {

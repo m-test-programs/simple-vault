@@ -23,7 +23,7 @@ From the project’s root folder, run the following commands:
 ### `POST /authenticate`
 
 **Description**:  
-This endpoint is used to authenticate a user by verifying their credentials. If the credentials match the expected values, a JWT token is returned (test login: username: `johnny_deep`, password: `strongpwd`).
+This endpoint is used to authenticate a user by verifying their credentials. If the credentials match the expected values, a JWT token is returned (test login: username: `johnny_depp`, password: `strongpwd`).
 
 **Request**:
 

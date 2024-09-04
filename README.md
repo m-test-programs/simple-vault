@@ -87,3 +87,16 @@ The request must include a Bearer token in the following format:
   }
 }
 ```
+
+If the request is successful, the endpoint returns a response with the following structure:
+
+```json
+{
+  "id": "string",
+  "data": {
+    "fullName": { "value": "string", "found": true | false },
+    "idNumber": { "value": "string", "found": true | false },
+    "creditCard": { "value": "string", "found": true | false }
+  }
+}
+```

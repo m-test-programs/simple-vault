@@ -53,7 +53,7 @@ The request must include a Bearer token in the following format:
 
 **Requested Body Format**:
 
-````json
+```json
 {
   "fullName": "string",
   "idNumber": "string | number",
@@ -67,6 +67,7 @@ The request must include a Bearer token in the following format:
 This endpoint is used to detokenize previously tokenized information provided by the user. The endpoint is protected by an authentication middleware that checks whether the user is authenticated. To access this endpoint, the user must provide a Bearer token in the Authorization header. The user must also provide a payload with a defined structure. If the data in the body does not have the correct structure, an error message will be returned.
 
 **Request**:
+
 - **URL**: `/detokenize`
 - **Method**: `POST`
 - **Content-Type**: `application/json`
@@ -85,4 +86,4 @@ The request must include a Bearer token in the following format:
     "creditCard": "string"
   }
 }
-````
+```

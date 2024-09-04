@@ -20,6 +20,10 @@ router.post(
         data: { fullName, idNumber, creditCard },
       } = payload;
 
+      if (!payload.id || !fullName || !idNumber || !creditCard) {
+        throw new Error();
+      }
+
       const tokens = {
         fullName: tokenize(fullName),
         idNumber: tokenize(idNumber),
@@ -43,7 +47,7 @@ router.post(
     } catch (error) {
       res.status(400).send({
         code: "Bad Request",
-        message: "The submitted data was uncorrect",
+        message: "The submitted data was incorrect",
       });
     }
   }
@@ -60,6 +64,10 @@ router.post(
         data: { fullName, idNumber, creditCard },
       } = payload;
 
+      if (!payload.id || !fullName || !idNumber || !creditCard) {
+        throw new Error();
+      }
+
       res.status(201).send({
         id: payload.id,
         data: {
@@ -71,7 +79,7 @@ router.post(
     } catch (error) {
       res.status(400).send({
         code: "Bad Request",
-        message: "The submitted data was uncorrect",
+        message: "The submitted data was incorrect",
       });
     }
   }

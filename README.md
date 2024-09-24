@@ -58,9 +58,12 @@ The request must include a Bearer token in the following format:
 
 ```json
 {
-  "fullName": "string",
-  "idNumber": "string | number",
-  "creditCard": "string"
+  "id": "string",
+  "data": {
+    "fullName": "string",
+    "idNumber": "string | number ",
+    "creditCard": "string"
+  }
 }
 ```
 
